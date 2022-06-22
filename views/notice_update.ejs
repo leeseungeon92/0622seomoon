@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update Memo Add</title>
+
+    <link rel = 'stylesheet' href="/stylesheets/style.css"/>
+
+</head>
+<body>
+    <h1>update Memo Add</h1>
+    <% if(typeof errs !== "undefined") { %>
+        <% errs.forEach((err)=>{ %>
+            <h4 style="color: red;"><%=err.param%> : <%=err.msg%></h4>
+        <% }) %>
+    <% } %>
+    <form method="POST" action="/notice_update">
+
+        <div>
+            <input type="hidden" name="id" value="<%=row.id%>">
+            번호<input name="number" class="title_number" value="<%=row.id%>">
+            알림 정보<input name="content" class="title_news" value="<%=row.content%>">
+            등록일<input name="date" class="title_date" value="<%=row.update_time%>">
+        </div>
+
+
+        <tr>
+            <td  colspan="2">
+                <input type="submit" value="저장" id="save">
+                <input type="button" value="뒤로 가기" onclick="javascript:location.href='/'">
+            </td>
+        </tr>
+    </form>
+</body>
+</html>

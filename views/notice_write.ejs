@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <main>
+        <section>
+            <h2>공지사항 작성하기</h2>
+            <form method="POST" action="/notice_write">
+            <table>
+                <tr>
+                    <label>알림 정보 제목</label>
+                    <td class="ti">
+                        <input name="notice_title" type="text" id="title">
+                        <span>(※ 최대 10자 이내)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td  colspan="2">
+                        <input type="submit" value="저장" id="save">
+                        <input type="button" value="뒤로 가기" onclick="javascript:location.href='/'">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        </section>
+    </main>
+
+
+    <% if(typeof errs !== 'undefined'){ %>
+        <% errs.forEach((err)=>{ %>
+            <h3><%=err.param%> : <%=err.msg%></h3>
+        <% }) %>
+    <% } %>
+</body>
+</html>

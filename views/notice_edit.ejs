@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/notice_admin.css">
+</head>
+<body>
+    <main>
+        <section>
+            <h2>공지사항 작성하기</h2>
+            <form>
+            <table>
+                <tr>
+                    <td><label>제목</label></td>
+                    <td class="ti">
+                        <input type="text" id="title">
+                        <span>(※ 최대 10자 이내)</span>
+                    </td>
+
+                </tr>
+
+                <tr>                    
+                    <td id="content">내용 작성 : </td>
+                    <td class="con">
+                        <textarea name="content"></textarea>
+                        <span>(※ 최대 50자 이하)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td  colspan="2">
+                        <input type="submit" value="수정" id="save">
+                        <input type="button" value="뒤로 가기" onclick="javascript:location.href='/notice_content'">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        </section>
+    </main>
+</body>
+</html>

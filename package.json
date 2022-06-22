@@ -1,0 +1,20 @@
+{
+  "name": "bin",
+  "version": "1.0.0",
+  "main": "www.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.4",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.1",
+    "morgan": "^1.10.0",
+    "my-sql": "^1.2.15"
+  }
+}

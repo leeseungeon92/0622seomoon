@@ -1,0 +1,104 @@
+main{
+    width: 100%;
+    background-color: black;
+}
+
+.h_login{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.h_login p{
+    width: 100%;
+    text-align: center;
+}
+
+.login{
+    background-image: url(../img/person_106357.png);
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+}
+
+
+.join{
+    background-image: url(../img/signin_106368.png);
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+}
+
+
+.menu_bar{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_bar>li{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.menu_bar>li:nth-child(1){
+    width: 100%;
+    background-color:  rgba(96,21,192,0.6);
+}
+
+.menu_bar>li:nth-child(2){
+    width: 100%;
+    background-color: rgba(255, 64, 179, 0.6);
+}
+
+.menu_bar>li:nth-child(3){
+    width: 100%;
+    background-color: rgba(124, 124, 124, 0.3);
+}
+
+.menu_bar>li:nth-child(4){
+    width: 100%;
+    background-color: rgba(0, 189, 139, 0.6);
+}
+
+.menu_bar>li:nth-child(5){
+    width: 100%;
+    background-color: rgba(0, 153, 221, 0.6);
+}
+
+.menu_bar a{
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.f_sns{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.naver{
+background-image: url(../img/naver\ blog.png);
+background-size: 105%;
+background-position: center center;
+width: 60px;
+height: 60px;
+border-radius: 10px;
+}
+
+
+.facebook{
+background-image: url(../img/facebook.png);
+background-size: 100%;
+width: 60px;
+height: 60px;
+border-radius: 10px;
+}

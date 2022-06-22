@@ -1,0 +1,202 @@
+
+main{
+    background-color: black;
+}
+form{
+    width: 768px;
+    margin: auto;
+    background-color: black;
+}
+
+.container_wrap{
+    width: 100%;
+}
+
+.classfy{
+    padding: 8px 0;
+}
+
+.classfy>ul{
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+.classfy li{
+    width: 45%;
+    background-color: antiquewhite;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.classfy a{
+    font-size: 24px;
+    color: #fff;
+}
+
+.classfy li:first-child{
+    background-color: rgba(0, 189, 139, 0.6);
+}
+
+.classfy li:last-child{
+    background-color: rgba(0, 153, 221, 0.6);
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-top: 1px solid#333;
+    border-bottom: 1px solid #333;
+}
+
+.container>p{
+    padding-top: 20px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    color:ghostwhite;
+}
+
+.container>div{
+    width: 100%;
+    color: #fff;
+}
+
+.container h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.container>div>div{
+    margin: 20px;
+}
+
+.nick{
+    margin: 20px 0;
+}
+
+.btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.btn>button{
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color:rgba(124, 124, 124, 0.6);
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn span{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.person_warp{
+    margin-top: 20px;
+}
+
+.person input{
+    color: #fff;
+    width: 150px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.id>input{
+    width: 150px;
+    height: 20px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.side{
+    font-size: 12px;
+}
+
+
+.dup>a{
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+    background-color:rgba(124, 124, 124, 0.5);
+    padding: 4px;
+    margin-left: 2px;
+    border: 1px solid #fff;
+}
+
+.pw>input{
+    width: 150px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.birth span{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.birth input{
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.birth select{
+    width: 70px;
+    height: 25px;
+}
+
+h3{
+    margin-bottom: 5px;
+}
+
+.sex select{
+    display: block;
+    width: 150px;
+    height: 30px;
+}
+
+.info input{
+    width: 200px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.info_sub
+{font-size: 12px;}
+
+.mail{
+    width: 150px;
+    height: 20px;
+}
+
+/**************************responsive***********************/
+
+@media only screen and (max-width: 768px)
+{
+
+    .container{
+        justify-content: center;
+    }
+
+    .btn{
+        margin: auto;
+        justify-content: center;
+    }
+}
+
+    /*max-width:768px*/
+    /**********************************************************/
+

@@ -1,0 +1,39 @@
+section{
+    width: 1200px;
+    margin: auto;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+table{
+    width: 100%;
+    border: 1px dashed #333;
+}
+
+td{
+    border: 1px dashed #333;
+    padding: 20px 10px;
+}
+
+.ti{
+    display: flex;
+    align-items: center;
+}
+
+.ti>span{
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.con{
+    display: flex;
+    align-items: center;
+}
+
+.con>span{
+    margin-left: 20px;
+    font-size: 14px;
+}
