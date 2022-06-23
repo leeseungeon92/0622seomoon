@@ -38,23 +38,6 @@ router.post('/notice_write',
 }
     });
 
-    //업데이트(수정) 되기전에 또 데이터 불러와야하는거 아닌가?
-
-// router.post('/notice_update', 
-//     [check('content').isLength({min: 1, max:100})], //content인가 notice_title이 되어야하는가?
-//     function(req,res, next){
-//     let errs = validationResult(req);
-//     console.log(errs); //콘솔 에러 출력하기
-//     if(errs['errors'].length > 0){ //화면 에러 출력하기
-//         res.render('notice_write',{errs:errs['errors']});
-//     } else{
-//         let param = JSON.parse(JSON.stringify(req.body));
-//         db.insertMemo(param['number'],param['info'],param['date'],() => { //여기도 바꿔줘야하는거아닌가?
-//             res.redirect('/');
-//         });
-// }
-//     });
-
 
 router.get('/notice_edit', (req,res) => {
     let id = req.query.id;
@@ -117,9 +100,6 @@ router.get('/notice_content', function(req, res, next){
 router.get('/notice_edit', function(req, res, next){
     res.render('notice_edit')
 })
-
-
-
 
 
 //수정버튼을 눌렀을때 나오는 하는 화면 함수 
