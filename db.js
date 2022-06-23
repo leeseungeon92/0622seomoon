@@ -5,7 +5,7 @@ const connection = mysql.createConnection({
     user :'b8af711059e047 ',
     password :'96d7a8099',
     port : 3306,
-    database : 'seo_notice',
+    database : 'heroku_b6d25066b6ef691',
     dateStrings : 'date' //날짜 시간 출력 
 })
 
