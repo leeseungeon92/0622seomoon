@@ -1,9 +1,9 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-    host :'localhost',
-    user :'root',
-    password :'1234',
+    host :'us-cdbr-east-05.cleardb.net',
+    user :'b8af711059e047 ',
+    password :'96d7a8099',
     port : 3306,
     database : 'seo_notice',
     dateStrings : 'date' //날짜 시간 출력 
