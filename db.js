@@ -9,6 +9,15 @@ const connection = mysql.createConnection({
     dateStrings : 'date' //날짜 시간 출력 
 })
 
+// const connection = mysql.createConnection({
+//     host :'localhost',
+//     user :'root',
+//     password :'1234',
+//     port : 3306,
+//     database : 'seo_notice',
+//     dateStrings : 'date' //날짜 시간 출력 
+// })
+
 //리스트 전체를 불러오는 방법
 function getAllMemos(callback){
     connection.query('select * from notice_admin ORDER BY id DESC', (err,rows,fields) => {
