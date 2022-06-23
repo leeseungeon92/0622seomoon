@@ -12,12 +12,13 @@
     <main>
         <section>
             <h2>공지사항 작성하기</h2>
-            <form>
+            <form method="post" action="/store">
             <table>
                 <tr>
+                    <input type="hidden" name="id" value="<%=row.id%>">
                     <td><label>제목</label></td>
                     <td class="ti">
-                        <input type="text" id="title">
+                        <input type="text" name="content" id="content" value="<%=row.content%>">
                         <span>(※ 최대 10자 이내)</span>
                     </td>
 
@@ -26,7 +27,7 @@
                 <tr>                    
                     <td id="content">내용 작성 : </td>
                     <td class="con">
-                        <textarea name="content"></textarea>
+                        <textarea name="inner_content"><%=row.inner_content%></textarea>
                         <span>(※ 최대 50자 이하)</span>
                     </td>
                 </tr>

@@ -21,73 +21,11 @@
             </section>
             <section class="content_main">
                 <div class="txt_title">
-                    <strong name="content_main_title"><%= row.main_title%>
-                    </strong>
+                    <strong name="content_main_title"><%= row.content%></strong>
                     <p>작성자 : <span name="content_admin_name">관리자</span></p>
                 </div>
                 <div class="txt_content">
-                    <h3 name="content_sub_title"><%= row.sub_title%></h3>
-                    <p>전국을 대표하는 야간관광지 「대구 서문·칠성 야시장」에서 뛰어난 열정을 펼칠 수 있는    창의적이고 역량이 뛰어난 매대 운영자를 모집하오니 많은 참여를 바랍니다.
-                    </p>
-
-                    <h3>1. 모집분야</h3>
-                    <p>- 음식매대
-
-                        야시장 영업에 적합한 특색 있는 퓨전·창작요리, 글로벌 음식, 지역을 대표하는
-                        
-                        인지도 있는 향토 먹거리<br>
-                        
-                        <span class="size14">(※ 매주 화요일은 정기휴무이며 기후, 재해, 야시장 운영 정책에 따라 영업시간 등이 변경될 수 있음)</span><br>
-                        
-                        <br>- 프리마켓 운영업체<br>
-                        
-                        <br>핸드메이드, 공예품, 아트상품, 생활잡화, 재능판매 등 20~30여개 프리마켓 셀러를 관리하는 업체
-                        
-                        <br><span class="size14">(※ 금~일, 공휴일 운영하며 영업시간은 야시장 영업시간과 동일)</span><br>
-                        
-                        <br>- 대학매대<br>
-                        
-                        <br>대구·경북권 식품관련학과 대학생들의 야시장에서 현장경험을 쌓기 위한 재학생 및 1년 이내 졸업생(학교 추천서)
-                        
-                        <br><span class="size14">(※ 토~일, 공휴일 운영하며 영업시간은 야시장 영업시간과 동일)</span>
-                    </p>
-
-                    <h3>2. 모집인원</h3>
-                    <p>- 음식매대 40명(서문야시장 20명, 칠성야시장 20명)<br>
-                        <br>- 프리마켓 운영업체 2개 업체(서문야시장 1개, 칠성야시장 1개)<br>
-                        <br>- 대학매대 4명(서문야시장 2명, 칠성야시장 2명)
-                    </p>
-
-                    <h3>3. 응시자격</h3>
-                    <p>
-                        - 거주지 제한 없음<br>
-
-                        <br>- 만 18세 이상 ~ 만 60세 이하(1962. 1. 1. ~ 2003. 12. 31. 출생자)<br>
-
-                        <br>- 신청자(배우자)가 직접 운영<br>
-
-                        <br>- 신청자 본인 사업자등록증 발급에 결격 사유가 없어야 함<br>
-
-                        <br>- 1가구(직계가족) 1매대 이상 신청할 수 없음<br>
-
-                        <span class="size14">(※ 서문, 칠성야시장 퇴점자 중 2021년 3월 이전에 퇴점자는 지원 가능)</span>
-                    </p>
-
-                    <h3>4. 지원자 혜택</h3>
-                    <p>- 3개월간 관리비 지원(개별 전기요금 제외)<br>
-
-                            <br>- 메뉴 및 밀키트 개발 컨설팅<br>
-                            
-                            <br>- 매대 상호, 홍보판 등 VMD지원(대학매대)
-                    </p>
-
-                    <h3>5. 신청방법</h3>
-                    <p>- 지원을 희망하는 야시장(서문, 칠성 야시장 중 택 1) 지원서 작성<br>
-
-                        <br>- 지원서 제출방법 : 홈페이지, 이메일, 방문 접수 / 문의처 : 053) 621-1985~6<br>
-                        
-                        <br>- 홈페이지 : 서문야시장<a href="http://www.nightseomun.com">(http://www.nightseomun.com)</a>, 칠성야시장<a href="http://7starnm.com">(http://7starnm.com)</a>
-                    </p>
+                    <div><%=row.inner_content%></div>
                 </div>
                 <td  colspan="2">
                     <input type="submit" value="수정" id="save" onclick="javascript:location.href='/notice_edit?id=<%=row.id%>'">

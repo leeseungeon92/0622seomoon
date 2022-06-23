@@ -1,11 +1,11 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-    host :'us-cdbr-east-05.cleardb.net',
-    user :'b8af711059e047',
-    password :'96d7a8099',
+    host :'localhost',
+    user :'root',
+    password :'1234',
     port : 3306,
-    database : 'heroku_b6d25066b6ef691',
+    database : 'seo_notice',
     dateStrings : 'date' //날짜 시간 출력 
 })
 
@@ -18,9 +18,9 @@ function getAllMemos(callback){
 }
 
 //리스트에 새로운 내용을 추가하는 함수
-function insertMemo(re_title, callback){
-    connection.query(`INSERT INTO notice_admin(content, create_time, update_time) VALUES
-    ('${re_title}',NOW(),NOW())`,(err,result) => {
+function insertMemo(re_title, inner_content, callback){
+    connection.query(`INSERT INTO notice_admin(content, inner_content, create_time, update_time) VALUES
+    ('${re_title}','${inner_content}', NOW(),NOW())`,(err,result) => {
         if (err) throw err;
         callback();
     })
@@ -35,8 +35,8 @@ function getMemoById(id, callback){
 }
 
 //리스트를 수정하고 싶을때 id값이 일치하는 부분을 수정하는 함수
-function updateMemoById(id, content, callback){
-    connection.query(`UPDATE NOTICE_ADMIN SET CONTENT = '${content}', update_time = NOW() WHERE id = '${id}'`,(err, result)=>{
+function updateMemoById(id, content, inner_content, callback){
+    connection.query(`UPDATE NOTICE_ADMIN SET CONTENT = '${content}', INNER_CONTENT = '${inner_content}', update_time = NOW() WHERE id = '${id}'`,(err, result)=>{
         if (err) throw err;
         callback();
     })
@@ -49,6 +49,7 @@ function deleteMemoById(id, callback){
         callback();
     })
 }
+
 
 module.exports = {
     getAllMemos,

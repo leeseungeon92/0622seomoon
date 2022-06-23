@@ -31,7 +31,8 @@ router.post('/notice_write',
     } else{
         let param = JSON.parse(JSON.stringify(req.body));
         let re_title = param['notice_title'] //db에 던져주기위해서 json의 형태로 만들어줌.
-        db.insertMemo(re_title, () => {
+        let inner_content = param['inner_content']
+        db.insertMemo(re_title, inner_content, () => {
             res.redirect('/');
         });
 }
@@ -55,33 +56,34 @@ router.post('/notice_write',
 //     });
 
 
-router.get('/notice_update', (req,res) => {
+router.get('/notice_edit', (req,res) => {
     let id = req.query.id;
 
     db.getMemoById(id, (row) => {
         if (typeof id == 'undefined' || row.length <= 0) {
             res.status(404).json({error:'undefined memo'});
         } else{
-                res.render('notice_update', {row : row[0] });
+                res.render('notice_edit', {row : row[0] });
         }
     })
 })
 
-router.post('/notice_update',
+router.post('/store',
     [check('content').isLength({min: 1, max:300})],
     (req,res) => {
         let errs = validationResult(req);
         let param = JSON.parse(JSON.stringify(req.body));
         let id = param['id'];
         let content = param['content'];
+        let inner_content = param['inner_content'];
 
         if (errs['errors'].length>0){
 
             db.getMemoById(id, (row) => {
-                res.render('notice_update',{row:row[0],errs : errs['errors']})
+                res.render('notice_edit',{row:row[0],errs : errs['errors']})
             });
         } else{
-            db.updateMemoById(id, content, () => {
+            db.updateMemoById(id, content, inner_content, () => {
                 res.redirect('/');
             })
         }
@@ -117,7 +119,10 @@ router.get('/notice_edit', function(req, res, next){
 })
 
 
-//공지 게시판 내용 보이기
+
+
+
+//수정버튼을 눌렀을때 나오는 하는 화면 함수 
 router.get('/notice_edit', (req,res) => {
     let id = req.query.id;
 
@@ -125,10 +130,32 @@ router.get('/notice_edit', (req,res) => {
         if (typeof id == 'undefined' || row.length <= 0) {
             res.status(404).json({error:'undefined memo'});
         } else{
-                res.render('updateMemo', {row : row[0] });
+                res.render('notice_edit', {row : row[0] });
         }
     })
 })
+
+//////////////////////////////
+router.post('/store',
+    [check('content').isLength({min: 1, max:300})],
+    (req,res) => {
+        let errs = validationResult(req);
+        let param = JSON.parse(JSON.stringify(req.body));
+        let id = param['id'];
+        let content = param['content'];
+        let inner_content = param['inner_content'];
+
+        if (errs['errors'].length>0){
+
+            db.getMemoById(id, (row) => {
+                res.render('notice_edit',{row:row[0],errs : errs['errors']})
+            });
+        } else{
+            db.updateMemoById(id, content, inner_content, () => {
+                res.redirect('/');
+            })
+        }
+});
 
 
 module.exports = router;
